@@ -1,6 +1,31 @@
 <template>
   <div class="uk-section uk-container">
-    <h2 class="uk-text-center">Find a better word</h2>
+    <div class="uk-padding">
+      <div class="uk-container">
+        <h2 class="uk-text-center">
+          Welcome to the site that brings you
+          <br>Knowledge and Laughter?
+        </h2>
+        <div style="width:50%;height:0;padding-bottom:89%;position:relative;">
+          <iframe
+            src="https://giphy.com/embed/11ahZZugJHrdLO"
+            width="100%"
+            height="100%"
+            style="position:absolute"
+            frameborder="0"
+            class="giphy-embed"
+            allowfullscreen
+          ></iframe>
+        </div>
+        <p>
+          <a href="https://giphy.com/gifs/what-the-fuck-11ahZZugJHrdLO">via GIPHY</a>
+        </p>
+        <p>Simply enter the word you need help with and we will deliver you a list of similar words with it's meanings</p>
+      </div>
+    </div>
+    <h2 class="uk-text-center">We got you!</h2> 
+    <h4 class="uk-text-center" style="font-style: italic;">Enter your word below</h4>
+
     <nav class="uk-navbar-container" uk-navbar>
       <div class="uk-navbar-left">
         <div class="uk-navbar-item">
@@ -44,41 +69,22 @@
       </div>
     </div>
 
-    <!-- <div class="uk-container">
-                <div class="uk-card uk-card-default">
-                    <div class="uk-card-header">
-                        <div class="uk-grid-small uk-flex-middle" uk-grid>
-                            <div class="uk-width-auto">
-                                <img class="uk-border-circle" width="40" height="40" src="images/avatar.jpg">
-                            </div>
-                            <div class="uk-width-expand">
-                                <h3 class="uk-card-title uk-margin-remove-bottom">Title</h3>
-                                <p class="uk-text-meta uk-margin-remove-top"><time datetime="2016-04-01T19:00">April 01, 2016</time></p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="uk-card-body">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
-                    </div>
-                    <div class="uk-card-footer">
-                        <a href="#" class="uk-button uk-button-text">Read more</a>
-                    </div>
-                </div>
-    </div>-->
-
     <div class="uk-section uk-section-muted uk-dark uk-padding uk-margin">
       <div class="uk-container">
-        <h2 class="uk-text-center">Are you in the mood for some old school Chuck Norris Jokes!?</h2>
+        <h2 class="uk-text-center">Before you go...Do you know who Chuck Norris is!?<br></h2>
+        You do...? 
 
-        <div class="uk-text-center">
-          <div>
-            <h1>😂</h1>
-            <div class="uk-animation-toggle" tabindex="0">
-              <div
-                class="uk-card uk-card-default uk-card-body uk-animation-shake uk-animation-reverse"
-              >
-                <button class="uk-button uk-button-secondary uk-button-large">Click here</button>
-              </div>
+        <div id="my-id" class="uk-offcanvas"></div>
+      </div>
+
+      <div class="uk-text-center">
+        <div>
+          <h1>😂</h1>
+          <div class="uk-animation-toggle" tabindex="0">
+            <div
+              class="uk-card uk-card-default uk-card-body uk-animation-shake uk-animation-reverse"
+            >
+              <button class="uk-button uk-button-secondary uk-button-large">Click here</button>
             </div>
           </div>
         </div>
@@ -86,6 +92,7 @@
     </div>
   </div>
 </template>
+
 <script>
 import axios from "axios";
 export default {
@@ -113,7 +120,7 @@ export default {
           console.log(response.data[0]);
           self.result = response.data[0];
         })
-        
+
         .catch(error => {
           console.log(error, "error");
         });

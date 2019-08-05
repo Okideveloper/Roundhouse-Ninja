@@ -1,58 +1,19 @@
-<!DOCTYPE html>
-<html>
-
-<head>
-    <title>Words of wisdom</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="./assets/css/uikit.min.css"/>
-    <script src="../assets/js/uikit.min.js"></script>
-    <script src="../assets/js/uikit-icons.min.js"></script>
-</head>
-
-<body>
-        <div class="uk-container">
-                <nav class="uk-navbar-container uk-margin" uk-navbar>
-                  <div class="uk-navbar-center">
-                    <div class="uk-navbar-center-left">
-            
-                      <div>
-                        <ul class="uk-navbar-nav">
-                          <li class=><a href="index.html">Home</a></li>
-                          <li>
-                            <a href="jokes.html">Chucks Jokes</a>
-                            <div class="uk-navbar-dropdown">
-                              <ul class="uk-nav uk-navbar-dropdown-nav">
-                                <li class="uk-active"><a href="#">Catagory List</a></li>
-                                <li><a href="#">Item</a></li>
-                                <li><a href="#">Item</a></li>
-                              </ul>
-                            </div>
-                          </li>
-                        </ul>
-                      </div>
-                    </div>
-                    <a class="uk-navbar-item uk-logo" href="#">Logo</a>
-                  </div>
-                </nav>
-
+<template>
+  <div>
+    <div class="uk-container">
         <div class="uk-section uk-section-muted uk-dark uk-padding">
-            <div class="uk-container">
+        <div class="uk-container">
 
-                <h1 class="uk-text-center">Chuck Norris Jokes</h1>
+            <h1 class="uk-text-center">Chuck Norris Jokes</h1>
 
+            <div>
                 <div>
-                    <div>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
-                    </div>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
                 </div>
-
             </div>
+
         </div>
     </div>
-
-
-    <div class="uk-section uk-container">
         <h3 class="uk-text-center">Categories</h3>
 
         <div class="uk-card uk-margin">
@@ -96,8 +57,5 @@
             </div>
         </div>
     </div>
-    </div>
-
-</body>
-
-</html>
+  </div>
+</template>
