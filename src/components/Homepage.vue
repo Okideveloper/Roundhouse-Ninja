@@ -1,4 +1,7 @@
 <template>
+
+
+
   <div class="uk-section uk-container">
     <div class="uk-padding">
       <div class="uk-container">
@@ -25,6 +28,7 @@
     </div>
     <h2 class="uk-text-center">We got you!</h2> 
     <h4 class="uk-text-center" style="font-style: italic;">Enter your word below</h4>
+  
 
     <nav class="uk-navbar-container" uk-navbar>
       <div class="uk-navbar-left">

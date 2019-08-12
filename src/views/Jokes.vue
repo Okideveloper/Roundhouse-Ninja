@@ -5,7 +5,7 @@
       <div class="uk-navbar-left">
          <ul class="uk-navbar-nav">
               <li class>
-                <a class="uk-navbar-item uk-logo" href="/">< Back to Result</a>
+                <a class="uk-navbar-item uk-logo" href="/"><Back to Results </a>
               </li>
             </ul>
       </div>
