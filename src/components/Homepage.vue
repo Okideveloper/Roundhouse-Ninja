@@ -1,30 +1,31 @@
 <template>
   <div class="uk-section uk-container">
-    <div class="uk-padding">
-      <div class="uk-container">
-        <h1 class="uk-text-center uk-text-uppercase uk-animation-fade">
+    <div class="uk-padding-large">
+      <div class="uk-container" style="background-color: #E5E4E2;">
+        <div class="uk-background">
+   
+        <h1 class="uk-text-center uk-text-uppercase uk-animation-fade uk-text-bold">
           The <br> Roundhouse Ninja Dictionary
         </h1>
         <div class="img-container">
           <img class="giphy-img" :src="giphy" alt="">
         </div>
-       
-        <h2 class="uk-text-center"></h2>
+    </div>
+        <h2 class="uk-text-center">
+        <q>Chuck Norris doesn't read books. He stares them down until he gets the information he wants.</q>
+        </h2>
       </div>
-    </div>
-    <div class="uk-text-secondary">
-    <h1 class="uk-text-center" style="font-style: bold;">Welcome</h1>
+</div>
     
-    <h2 class="uk-text-center" style="font-style: italic;">If you are seeking for answers... <br> you've come to the right place</h2>
-    </div>
+   
     <nav class="uk-navbar-container" uk-navbar>
-      <div class="uk-navbar-left">
+      <div class="uk-navbar-left" style="background-color: #E5E4E2;">
         <div class="uk-navbar-item">
           <form @submit="queryData" class="uk-search uk-search-navbar">
             <span uk-search-icon></span>
             <input
               v-model="keyword"
-              class="uk-search-input"
+              class="uk-search-input uk-margin"
               type="search"
               placeholder="Start typing..."
             >
@@ -32,9 +33,9 @@
         </div>
       </div>
     </nav>
-    <div class="uk-container center">
+    <div class="uk-container uk-margin">
       <div uk-scrollspy="cls: uk-animation-fade; target: .uk-card; delay: 500; repeat: true">
-        <div class="uk-card uk-card-default" style="min-height: 200px;">
+        <div class="uk-card uk-card-default" style="min-height: 400px;">
           <div class="uk-card-body" v-if="result">
             <h3 class="uk-card-title">{{ keyword }}</h3>
             <ul class="uk-list uk-list-bullet uk-list-divider">
@@ -61,9 +62,9 @@
     </div>
 
     <div class="uk-section uk-section-muted uk-dark uk-padding uk-margin">
-      <div class="uk-container">
-        <h2 class="uk-text-center" style="font-style: italic;">I'm glad you're receiving answers...</h2> 
-        <p class="uk-text-center" style="color: red; font-size: 20px;">Now please read on for facts about Chuck Norris</p>
+      <div class="uk-container uk-margin">
+        <h1 class="uk-text-center" style="font-style: italic; color: red;">Fun facts about Chuck Norris</h1> 
+        
     </div>
     
         <div class="chuck-joke" v-if="joke">
@@ -162,7 +163,7 @@ export default {
 
     getGiphy: function(word) {
        let url =
-         `http://api.giphy.com/v1/gifs/search?q=wow&api_key=7wcB6xYPVXC00I0D58WsoSFD8DLTTLDc&limit=1`;
+         `http://api.giphy.com/v1/stickers/search?q=chuck+norris+yeah&api_key=7wcB6xYPVXC00I0D58WsoSFD8DLTTLDc&limit=2`;
       
       let config = {
         headers: { 
@@ -187,6 +188,9 @@ export default {
 
 <style>
 
+.uk-padding {
+  background-color: #85929E;
+}
 .img-container {
   width: 100%;
   text-align: center;
