@@ -2,20 +2,21 @@
   <div class="uk-section uk-container">
     <div class="uk-padding">
       <div class="uk-container">
-        <h1 class="uk-text-center">
-          Welcome to the site that brings you
-          <br>Knowledge and Laughter!
+        <h1 class="uk-text-center uk-text-uppercase uk-animation-fade">
+          The <br> Roundhouse Ninja Dictionary
         </h1>
         <div class="img-container">
           <img class="giphy-img" :src="giphy" alt="">
         </div>
        
-        <p>Simply enter the word you need help with and we will deliver you a list of similar words with it's meanings</p>
+        <h2 class="uk-text-center"></h2>
       </div>
     </div>
+    <div class="uk-text-secondary">
+    <h1 class="uk-text-center" style="font-style: bold;">Welcome</h1>
     
-    <h4 class="uk-text-center" style="font-style: italic;">Enter your word below</h4>
-
+    <h2 class="uk-text-center" style="font-style: italic;">If you are seeking for answers... <br> you've come to the right place</h2>
+    </div>
     <nav class="uk-navbar-container" uk-navbar>
       <div class="uk-navbar-left">
         <div class="uk-navbar-item">
@@ -61,10 +62,10 @@
 
     <div class="uk-section uk-section-muted uk-dark uk-padding uk-margin">
       <div class="uk-container">
-        <h2 class="uk-text-center">
-          To make your search more enjoyable I included jokes for your entertainment!
-          <br>
-        </h2>You do...?
+        <h2 class="uk-text-center" style="font-style: italic;">I'm glad you're receiving answers...</h2> 
+        <p class="uk-text-center" style="color: red; font-size: 20px;">Now please read on for facts about Chuck Norris</p>
+    </div>
+    
         <div class="chuck-joke" v-if="joke">
           <img :src="joke.icon_url" alt="">
           {{ joke.value }}
@@ -88,7 +89,7 @@
         </div>
       </div>
     </div>
-  </div>
+  
 </template>
 
 <script>
@@ -102,7 +103,7 @@ export default {
       giphy: null
     };
   },
-  created () {
+  created() {
     this.getGiphy()
   },
   methods: {
@@ -185,9 +186,7 @@ export default {
 </script>
 
 <style>
-.giphy-img {
 
-}
 .img-container {
   width: 100%;
   text-align: center;
