@@ -3,39 +3,33 @@
     <div class="uk-padding-large">
       <div class="uk-container" style="background-color: #E5E4E2;">
         <div class="uk-background">
-   
-        <h1 class="uk-text-center uk-text-uppercase uk-animation-fade uk-text-bold">
-          The <br> Roundhouse Ninja Dictionary
-        </h1>
-        <div class="img-container">
-          <img class="giphy-img" :src="giphy" alt="">
+          <h1 class="uk-text-center uk-text-uppercase uk-animation-fade uk-text-bold">
+            The
+            <br>Roundhouse Ninja Dictionary
+          </h1>
+          <div class="img-container">
+            <img class="giphy-img" :src="giphy" alt>
+          </div>
         </div>
-    </div>
         <h2 class="uk-text-center">
-        <q>Chuck Norris doesn't read books. He stares them down until he gets the information he wants.</q>
+          <q>Chuck Norris doesn't read books. He stares them down until he gets the information he wants.</q>
         </h2>
       </div>
-</div>
-    
-   
-    <nav class="uk-navbar-container" uk-navbar>
-      <div class="uk-navbar-left" style="background-color: #E5E4E2;">
-        <div class="uk-navbar-item">
-          <form @submit="queryData" class="uk-search uk-search-navbar">
-            <span uk-search-icon></span>
-            <input
-              v-model="keyword"
-              class="uk-search-input uk-margin"
-              type="search"
-              placeholder="Start typing..."
-            >
-          </form>
-        </div>
-      </div>
-    </nav>
+    </div>
+
+    <form @submit="queryData" class="uk-search uk-search-navbar">
+      <span uk-search-icon></span>
+      <input
+        v-model="keyword"
+        class="uk-search-input uk-margin"
+        type="search"
+        placeholder="Start typing..."
+      >
+    </form>
+
     <div class="uk-container uk-margin">
       <div uk-scrollspy="cls: uk-animation-fade; target: .uk-card; delay: 500; repeat: true">
-        <div class="uk-card uk-card-default" style="min-height: 400px;">
+        <div class="uk-card uk-card-default" style="min-height: 400px; background-color: #E5E4E2;">
           <div class="uk-card-body" v-if="result">
             <h3 class="uk-card-title">{{ keyword }}</h3>
             <ul class="uk-list uk-list-bullet uk-list-divider">
@@ -63,34 +57,33 @@
 
     <div class="uk-section uk-section-muted uk-dark uk-padding uk-margin">
       <div class="uk-container uk-margin">
-        <h1 class="uk-text-center" style="font-style: italic; color: red;">Fun facts about Chuck Norris</h1> 
-        
-    </div>
-    
-        <div class="chuck-joke" v-if="joke">
-          <img :src="joke.icon_url" alt="">
-          {{ joke.value }}
-        </div>
-        <div id="my-id" class="uk-offcanvas"></div>
+        <img src="/images/the-facts.jpg" alt="site logo" class="logo">
+        <h1
+          class="uk-text-center"
+          style="font-style: italic; color: red;"
+        >Fun facts about Chuck Norris</h1>
       </div>
 
-      <div class="uk-text-center">
-        <div>
-          <h1>😂</h1>
-          <div class="uk-animation-toggle" tabindex="0">
-            <div
-              class="uk-card uk-card-default uk-card-body uk-animation-shake uk-animation-reverse"
-            >
-              <router-link
-                to="/jokes"
-                class="uk-button uk-button-secondary uk-button-large"
-              >Click here</router-link>
-            </div>
+      <div class="chuck-joke" v-if="joke">
+        <img :src="joke.icon_url" alt>
+        {{ joke.value }}
+      </div>
+      <div id="my-id" class="uk-offcanvas"></div>
+    </div>
+
+    <div class="uk-text-center">
+      <div>
+        <div class="uk-animation-toggle" tabindex="0">
+          <div class="uk-card uk-card-default uk-card-body uk-animation-shake uk-animation-reverse">
+            <router-link
+              to="/jokes"
+              class="uk-button uk-button-secondary uk-button-large"
+            >Click here</router-link>
           </div>
         </div>
       </div>
     </div>
-  
+  </div>
 </template>
 
 <script>
@@ -105,7 +98,7 @@ export default {
     };
   },
   created() {
-    this.getGiphy()
+    this.getGiphy();
   },
   methods: {
     queryData: function(e) {
@@ -119,7 +112,7 @@ export default {
         "https://www.dictionaryapi.com/api/v3/references/thesaurus/json/" +
         this.keyword +
         "?key=54dfb352-a9db-4150-885c-c21f3cea99ad";
-      
+
       axios
         .get(url)
         .then(response => {
@@ -140,11 +133,10 @@ export default {
       this.queryData(null);
     },
     getJokes: function(word) {
-       let url =
-         `https://api.chucknorris.io/jokes/search?query=${word}`;
-      
+      let url = `https://api.chucknorris.io/jokes/search?query=${word}`;
+
       let config = {
-        headers: { 
+        headers: {
           "Content-Type": "application/json",
           "Access-Control-Allow-Origin": "*",
           "Access-Control-Allow-Credentials": true
@@ -162,11 +154,10 @@ export default {
     },
 
     getGiphy: function(word) {
-       let url =
-         `http://api.giphy.com/v1/stickers/search?q=chuck+norris+yeah&api_key=7wcB6xYPVXC00I0D58WsoSFD8DLTTLDc&limit=2`;
-      
+      let url = `http://api.giphy.com/v1/stickers/search?q=chuck+norris+yeah&api_key=7wcB6xYPVXC00I0D58WsoSFD8DLTTLDc&limit=2`;
+
       let config = {
-        headers: { 
+        headers: {
           "Content-Type": "application/json",
           "Access-Control-Allow-Origin": "*",
           "Access-Control-Allow-Credentials": true
@@ -187,10 +178,10 @@ export default {
 </script>
 
 <style>
-
-.uk-padding {
-  background-color: #85929E;
+.uk-section {
+  background-color: #7e6446;
 }
+
 .img-container {
   width: 100%;
   text-align: center;

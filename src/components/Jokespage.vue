@@ -86,12 +86,10 @@ export default {
           console.log(response.data[0]);
           self.result = response.data[0];
         })
-
         .catch(error => {
           console.log(error, "error");
         });
     },
-
     updateKeyword: function(word) {
       this.keyword = word;
       this.queryData(null);
