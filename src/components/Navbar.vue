@@ -1,14 +1,8 @@
 <template>
-  <nav class="navbar">
+  <nav class="navbar uk-text-center">
     <ul class="link-styles">
       <li>
-        <router-link to="/">Home</router-link>
-      </li>
-      <li>
-        <router-link to="/jokes">
-          More chuck
-          jokes
-        </router-link>
+        <router-link to="/">Find the word you're searching for</router-link>
       </li>
     </ul>
   </nav>
