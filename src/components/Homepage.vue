@@ -8,7 +8,7 @@
       <br>
       <p
         class="uk-text-center uk-text-large uk-animation-fade uk-text-lowercase"
-      >including word related Chuck Norris Jokes</p>
+      >The only word search that delivers you a Chuck Norris Joke with your word entry</p>
 
       <div class="img-container">
         <img class="giphy-img" :src="giphy" alt>
@@ -27,7 +27,7 @@
     
       
         <form @submit="queryData" class="uk-search-default uk-margin uk-padding">
-          <div class="uk-search uk-search-large">
+          <div class="uk-search uk-search-large uk-padding">
             <input
               v-model="keyword"
               class="norris-search"
@@ -194,6 +194,15 @@ export default {
 
 <style>
 
+body {
+  width: 100%;
+}
+
+h5 {
+  color: black !important;
+  font-family: tangerine;
+}
+
 
 .bg-results {
   height: auto;
@@ -214,13 +223,14 @@ export default {
 }
 
 .norris-search {
-  color: black !important;
+  
   font-size: 25px;
   background-color: rgb(252, 237, 109);
 }
 
 .chuck-joke {
   display: inline-block;
+  
 }
 .start-button {
   background-color: rgb(218, 53, 53) !important;
