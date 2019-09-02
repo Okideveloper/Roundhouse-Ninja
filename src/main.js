@@ -3,8 +3,6 @@ import router from './router'
 import App from "./App"
 import Vuikit from 'vuikit'
 import VuikitIcons from '@vuikit/icons'
-
-
 import '@vuikit/theme'
 
 Vue.use(Vuikit)

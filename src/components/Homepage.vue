@@ -14,6 +14,7 @@
         <img class="giphy-img" :src="giphy" alt>
 
         <h2 class="uk-text-center uk-padding">
+          <span uk-icon="icon: check"></span>
           <q>
             Chuck Norris doesn't read books.
             <br>He stares them down until he gets the information he wants.
@@ -65,10 +66,10 @@
 
     <div class="uk-section uk-section-muted uk-dark uk-padding" v-if="result !== null">
       <div class="uk-container">
-        <h1
+        <h2
           class="uk-text-center"
-          style="font-style: italic; color: red;"
-        >Fun facts about Chuck Norris</h1>
+          style="font-style: italic; font-weight: 600; color: #292B32"
+        >Chuck Norris Jokes</h2>
         <div class="uk-flex uk-flex-center">
           <div>
             <img src="/images/the-facts.jpg" alt="site logo" class="logo" height="240">
@@ -79,10 +80,10 @@
             <h5>{{ joke.value }}</h5>
             <div class="uk-animation-toggle" tabindex="0">
               <div class="uk-card uk-card-default uk-card-body">
-                <router-link
-                  to="/jokes"
-                  class="uk-button uk-button-secondary uk-button-large"
-                >Want more Jokes?</router-link>
+                <h2
+                  class="uk-text-center"
+                  style="font-style: italic; font-weight: 400; color: #152C85"
+                >Continue the fun by entering more words</h2>
               </div>
             </div>
           </div>
@@ -187,7 +188,7 @@ export default {
 
 <style>
 .uk-section-primary {
-  background: red !important;
+  background: rgba(9, 109, 155, 0.801) !important;
 }
 
 h5 {
@@ -197,7 +198,7 @@ h5 {
 
 .bg-results {
   height: auto;
-  background-color: rgba(108, 245, 17, 0.534) !important;
+  background-color: rgba(156, 236, 173, 0.418) !important;
 }
 
 .img-container {
@@ -223,7 +224,11 @@ h5 {
 }
 .start-button {
   background-color: rgb(218, 53, 53) !important;
-  color: rgb(244, 244, 244) !important;
+  color: rgb(245, 226, 226) !important;
   margin-bottom: 100px !important;
+}
+
+.body-bg {
+  background-color: blue;
 }
 </style>

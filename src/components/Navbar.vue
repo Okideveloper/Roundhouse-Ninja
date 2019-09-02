@@ -2,7 +2,7 @@
   <nav class="navbar uk-text-center">
     <ul class="link-styles">
       <li>
-        <router-link to="/">Find the word you're searching for</router-link>
+        <router-link to="/">Word search Fun</router-link>
       </li>
     </ul>
   </nav>
@@ -32,7 +32,7 @@ ul li {
 .link-styles li {
   
   display: inline;
-  font-size:222px;
+  font-size:22px;
   font-family: Verdana,Tahoma, sans-serif;
   line-height: 100px;
   padding: 300px;
