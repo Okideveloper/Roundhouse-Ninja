@@ -105,8 +105,7 @@ export default {
       keyword: "",
       result: null,
       joke: null,
-      giphy: null,
-      jokeSet: null
+      giphy: null
     };
   },
   created() {
