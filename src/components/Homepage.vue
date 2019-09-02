@@ -73,7 +73,7 @@
         >Chuck Norris Jokes</h2>
         <div class="uk-flex uk-flex-center">
           <div>
-            <img src="/images/the-facts.jpg" class="logo" height="240">
+            <img src="/images/the-facts.jpg" alt="funny-pic" height="240">
           </div>
 
           <div class="chuck-joke uk-padding uk-text-center" v-if="joke">
