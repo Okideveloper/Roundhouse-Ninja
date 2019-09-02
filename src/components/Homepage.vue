@@ -193,7 +193,6 @@ export default {
 
 h5 {
   color: black !important;
-  font-family: tangerine;
 }
 
 .bg-results {
