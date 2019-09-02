@@ -25,6 +25,7 @@
       </div>
 
       <form @submit="queryData" class="uk-search-default uk-margin uk-padding">
+        
         <div class="uk-search uk-search-large uk-padding">
           <input id="search-area"
             v-model="keyword"
