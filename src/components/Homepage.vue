@@ -22,22 +22,18 @@
 
         <a class="uk-button start-button" href="#search-area">Let's get Started</a>
       </div>
-    
 
-    
-      
-        <form @submit="queryData" class="uk-search-default uk-margin uk-padding">
-          <div class="uk-search uk-search-large uk-padding">
-            <input
-              v-model="keyword"
-              class="norris-search"
-              type="search"
-              placeholder="Start typing..."
-            >
-          </div>
-        </form>
-      </div>
-  
+      <form @submit="queryData" class="uk-search-default uk-margin uk-padding">
+        <div class="uk-search uk-search-large uk-padding">
+          <input
+            v-model="keyword"
+            class="norris-search"
+            type="search"
+            placeholder="Start typing..."
+          >
+        </div>
+      </form>
+    </div>
 
     <div class="uk-container uk-margin" v-if="result !== null">
       <div uk-scrollspy="cls: uk-animation-fade; target: .uk-card; delay: 500; repeat: true">
@@ -159,9 +155,6 @@ export default {
         .get(url, config)
         .then(response => {
           this.joke = response.data.result[0];
-          this.jokeSet = response.data.result;
-          console.log(this.jokeSet.length, "Jokes!");
-          console.log(response.data.result[0]);
         })
         .catch(error => {
           console.log(error, "error");
@@ -193,16 +186,14 @@ export default {
 </script>
 
 <style>
-
-body {
-  width: 100%;
+.uk-section-primary {
+  background: red !important;
 }
 
 h5 {
   color: black !important;
   font-family: tangerine;
 }
-
 
 .bg-results {
   height: auto;
@@ -223,14 +214,12 @@ h5 {
 }
 
 .norris-search {
-  
   font-size: 25px;
   background-color: rgb(252, 237, 109);
 }
 
 .chuck-joke {
   display: inline-block;
-  
 }
 .start-button {
   background-color: rgb(218, 53, 53) !important;

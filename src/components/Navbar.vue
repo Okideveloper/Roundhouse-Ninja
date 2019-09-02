@@ -32,7 +32,7 @@ ul li {
 .link-styles li {
   
   display: inline;
-  font-size: 22px;
+  font-size:222px;
   font-family: Verdana,Tahoma, sans-serif;
   line-height: 100px;
   padding: 300px;
