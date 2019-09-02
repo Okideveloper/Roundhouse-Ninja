@@ -26,7 +26,7 @@
 
       <form @submit="queryData" class="uk-search-default uk-margin uk-padding">
         <div class="uk-search uk-search-large uk-padding">
-          <input
+          <input id="search-area"
             v-model="keyword"
             class="norris-search"
             type="search"
@@ -64,7 +64,7 @@
       </div>
     </div>
 
-    <div class="uk-section uk-section-muted uk-dark uk-padding" v-if="result !== null">
+    <div class="uk-section uk-dark uk-padding joke-bg" v-if="result !== null">
       <div class="uk-container">
         <h2
           class="uk-text-center"
@@ -77,13 +77,15 @@
 
           <div class="chuck-joke uk-padding uk-text-center" v-if="joke">
             <img :src="joke.icon_url" alt="norris head" width="50">
-            <h5>{{ joke.value }}</h5>
+            <h5 class="joke-heading"> {{joke.value }}</h5>
             <div class="uk-animation-toggle" tabindex="0">
               <div class="uk-card uk-card-default uk-card-body">
-                <h2
-                  class="uk-text-center"
-                  style="font-style: italic; font-weight: 400; color: #152C85"
-                >Continue the fun by entering more words</h2>
+                <a href="#search-area" @click="clearSearch">
+                  <h2
+                    class="uk-text-center"
+                    style="font-style: italic; font-weight: 400; color: #152C85"
+                  >Continue the fun by entering more words</h2>
+                </a>
               </div>
             </div>
           </div>
@@ -111,6 +113,9 @@ export default {
     this.getGiphy();
   },
   methods: {
+    clearSearch: function() {
+      this.keyword = ''
+    },
     queryData: function(e) {
       if (e) e.preventDefault();
       const self = this;
@@ -191,8 +196,10 @@ export default {
   background: rgba(9, 109, 155, 0.801) !important;
 }
 
-h5 {
+ .joke-heading {
   color: black !important;
+  font-family: 'Mali', cursive;
+  font-size: 1.1em;
 }
 
 .bg-results {
@@ -229,5 +236,9 @@ h5 {
 
 .body-bg {
   background-color: blue;
+}
+
+.joke-bg {
+  background: rgb(230,230,230);
 }
 </style>
